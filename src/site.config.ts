@@ -3,11 +3,11 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // [Basic]
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: 'Astro Theme Pure',
+  title: "GTB's Home",
   /** Will be used in index page & copyright declaration */
-  author: 'Pure Lab',
+  author: 'GTB',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Stay hungry, stay foolish',
+  description: "GTB's personal website",
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** The default social card image for your site which should be a path to an image in the `public/` directory. */
@@ -32,7 +32,8 @@ export const theme: ThemeUserConfig = {
 
   titleDelimiter: '•',
   prerender: true, // pagefind search is not supported with prerendering disabled
-  npmCDN: 'https://cdn.jsdelivr.net/npm',
+  // npmCDN: 'https://cdn.jsdelivr.net/npm',
+  npmCDN: 'https://cdn.jsdmirror.com/npm',
 
   // Still in test
   head: [
@@ -48,10 +49,11 @@ export const theme: ThemeUserConfig = {
   /** Configure the header of your site. */
   header: {
     menu: [
-      { title: 'Blog', link: '/blog' },
-      { title: 'Docs', link: '/docs' },
-      { title: 'Projects', link: '/projects' },
-      { title: 'Links', link: '/links' },
+      { title: 'Blog', link: 'https://blog.gtbcamp.cn/' },
+      { title: 'Notes', link: 'https://gtbro.vip/notes' },
+      // { title: 'Docs', link: '/docs' },
+      // { title: 'Projects', link: '/projects' },
+      // { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
     ]
   },
@@ -59,26 +61,41 @@ export const theme: ThemeUserConfig = {
   /** Configure the footer of your site. */
   footer: {
     // Year format
-    year: `© ${new Date().getFullYear()}`,
-    // year: `© 2019 - ${new Date().getFullYear()}`,
+    // year: `© ${new Date().getFullYear()}`,
+    year: `© 2022 - ${new Date().getFullYear()}`,
     links: [
       // Registration link
+      // {
+      //   title: '粤ICP备2022103869号-1',
+      //   link: 'https://beian.miit.gov.cn/',
+      //   style: 'text-sm' // Uno/TW CSS class
+      // },
       {
-        title: 'Moe ICP 114514',
-        link: 'https://icp.gov.moe/?keyword=114514',
+        title: 'Moe ICP 20255288',
+        link: 'https://icp.gov.moe/?keyword=20255288',
         style: 'text-sm' // Uno/TW CSS class
-      },
-      // Privacy Policy link
-      {
-        title: 'Site Policy',
-        link: '/terms',
-        pos: 2 // position set to 2 will be appended to copyright line
       }
+      // {
+      //   title: 'Travelling',
+      //   link: 'https://www.travellings.cn/go.html',
+      //   style: 'text-sm'
+      // },
+      // Privacy Policy link
+      // {
+      //   title: 'Site Policy',
+      //   link: '/terms',
+      //   pos: 2 // position set to 2 will be appended to copyright line
+      // }
     ],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/cworld1/astro-theme-pure' }
+    social: {
+      github: 'https://github.com/wanglh03',
+      zhihu: 'https://www.zhihu.com/people/GreatThunderBro',
+      bilibili: 'https://space.bilibili.com/18228890',
+      netease: 'https://music.163.com/#/user/home?id=473800335'
+    }
   },
 
   // [Content]
@@ -114,8 +131,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://astro-pure.js.org/' },
-      { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+      { name: 'Link', val: 'https://gtbcamp.cn/' },
+      { name: 'Avatar', val: 'https://gtbcamp.cn/favicon/favicon.ico' }
     ],
     // Cache avatars in `public/avatars/` to improve user experience.
     cacheAvatar: false
@@ -159,9 +176,9 @@ export const integ: IntegrationUserConfig = {
   },
   // Comment system
   waline: {
-    enable: true,
+    enable: false,
     // Server service link
-    server: 'https://astro-theme-pure-waline.arthals.ink/',
+    server: 'https://comment.gtbcamp.cn/',
     // Show meta info for comments
     showMeta: false,
     // Refer https://waline.js.org/en/guide/features/emoji.html

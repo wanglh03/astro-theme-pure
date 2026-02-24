@@ -40,7 +40,8 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
           {
             footerConf.links && footerConf.links.length > 0 && (
               <>
-                &
+                . All rights reserved.
+                {/* &
                 <span>
                   {footerConf.links
                     .filter(({ pos }) => pos === 2)
@@ -49,7 +50,7 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
                         <a href={link} target='_blank' class={style}>{title}</a>
                       </span>
                     ))}
-                </span>
+                </span> */}
               </>
             )
           }
@@ -57,10 +58,11 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
         {
           footerConf.credits && (
             <span>
+              Powered by
               <a href='https://github.com/withastro/astro' target='_blank'>Astro</a>
               &
               <a href='https://github.com/cworld1/astro-theme-pure' target='_blank'>Pure</a>
-              theme powered
+              .
             </span>
           )
         }
